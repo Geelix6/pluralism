@@ -1,0 +1,605 @@
+*
+  box-sizing: border-box
+
+body
+  margin: 0
+  padding: 0
+  font-family: 'Montserrat', sans-serif
+  background-color: #f6f6f6//#ecf0f1
+  color: #041827
+.wrap
+  max-width: 1300px
+  padding: 0 20px
+  margin: 0 auto
+  &--header
+    display: flex
+    justify-content: end
+    height: 100%
+  &--footer
+    display: flex
+    justify-content: space-between
+    padding: 25px 20px
+  &--cart
+    position: relative
+    padding-top: 40px
+  &--productWindow
+    position: relative
+    display: flex
+    justify-content: space-between
+    padding-top: 40px
+.header
+  position: fixed
+  z-index: 10
+  top: 0
+  height: 80px
+  width: 100%
+  box-shadow: 0 0 3px 0
+  background-color: #fff
+  &__logoImage
+    position: absolute
+    left: 50%
+    transform: translateX(-50%)
+    height: 100%
+  &__cart
+    position: relative
+    top: 50%
+    transform: translateY(-50%)
+    width: calc(19px * 1.5)
+    height: calc(23px * 1.5)
+    cursor: pointer
+    &Icon
+      opacity: 1
+    &Count
+      position: absolute
+      right: -12px
+      height: 20px
+      width: 20px
+      background: #ccccff
+      border-radius: 50%
+      text-align: center
+      font-weight: bold
+.promo
+  position: relative
+  height: 700px
+  margin-top: 80px
+  margin-bottom: 40px
+  padding-top: 60px
+  &__picture
+    position: absolute
+    top: 0
+    right: 0
+    z-index: -10
+    width: 100%
+    height: 100%
+    object-fit: cover
+  &__title
+    max-width: 600px
+    margin-top: 0
+    margin-bottom: 20px
+    font-size: 40px
+    color: #fff
+  &__subtitle
+    max-width: 700px
+    text-align: justify
+    margin-top: 0
+    margin-bottom: 30px
+    font-size: 26px
+    color: #fff
+  &__orderButton
+    width: 300px
+    padding: 10px 7px
+    font-family: "Montserrat", sans-serif
+    font-weight: bold
+    background-color: #19234c
+    font-size: 26px
+    color: #fff
+    border: none
+    border-radius: 4px
+    cursor: pointer
+
+.products
+  margin-bottom: 60px
+  &__title
+    margin-top: 0
+    margin-bottom: 20px
+    font-size: 50px
+    text-align: center
+
+  &__wrapper
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    grid-gap: 5vw
+  // grid-template-rows: repeat()
+
+.item
+  position: relative
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: space-evenly
+  cursor: pointer
+  transition: 0.2s linear
+  &:hover
+    box-shadow: 0px 0px 0px 10px white, 0px 0px 15px 10px rgb(0 0 0 / 10%)
+    background-color: #fff
+  &:hover .item__image
+    opacity: 0
+
+  &:hover .item__image--second
+    opacity: 1
+  &__image
+    width: 100%
+    margin-bottom: 20px
+    transition: 0.4s
+    &--second
+      position: absolute
+      top: 0
+      width: 100%
+      margin-bottom: 20px
+      opacity: 0
+      transition: 0.4s
+  &__title
+    font-family: 'Kanit', sans-serif
+    font-weight: lighter
+    font-size: 26px
+    margin-top: 0
+    margin-bottom: 10px
+  &__price
+    font-size: 20px
+    margin-bottom: 20px
+
+.footer
+  display: flex
+  background-color: #041827
+  color: #ecf0f1
+  box-shadow: 0px 0px 4px 1px black
+  &__subtitle
+    margin-top: 0
+    margin-bottom: 15px
+    font-size: 16px
+  &__aboutUs
+    flex-basis: 35%
+    &_text
+      margin-top: 0
+      margin-bottom: 0
+      font-size: 14px
+      line-height: 22px
+      text-align: justify
+  &__help
+    flex-basis: 25%
+    &_list
+      margin-top: 0
+      margin-bottom: 0
+      padding: 0
+      cursor: pointer
+      &Item
+        margin-bottom: 10px
+        list-style-type: none
+        &:last-child
+          margin-bottom: 0
+  &__social
+    flex-basis: 25%
+    &_linksWrap
+      display: flex
+      flex-direction: column
+    &Link
+      display: flex
+      justify-content: center
+      align-items: center
+      width: 250px
+      height: 40px
+      margin-bottom: 10px
+      border: 2px solid #ecf0f1
+      border-radius: 8px
+      text-decoration: none
+      color: inherit
+      &:last-child
+        margin-bottom: 0
+
+.cart
+  position: fixed
+  z-index: 50
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+  overflow: auto
+  background-color: #ecf0f1
+  color: #041827
+  &--hidden
+    visibility: hidden
+    opacity: 0
+    z-index: -100
+  &__close
+    position: absolute
+    right: 20px
+    height: 20px
+    width: 20px
+    cursor: pointer
+    &--hidden
+      display: none
+  &__title
+    margin-top: 0
+  &__wrapper
+    display: flex
+    justify-content: space-between
+  &__item
+    display: flex
+    align-items: center
+    justify-content: space-between
+    padding: 5px 0
+    border-top: 1px solid #000
+    border-bottom: 1px solid #000
+    margin-bottom: 15px
+    &Wrapper
+      flex-basis: 70%
+      &Empty--hidden
+        display: none
+    &Image
+      height: 150px
+    &ChangeAmount
+      font-size: 20px
+      cursor: default
+    &Delete
+      cursor: pointer
+  &__order
+    box-sizing: content-box
+    flex-basis: 25%
+    height: 150px
+    padding: 5px
+    border-top: 1px solid #000
+    border-bottom: 1px solid #000
+    &--hidden
+      display: none
+    &Title
+      margin-top: 0
+      margin-bottom: 20px
+    &Details
+      display: flex
+      justify-content: space-between
+      margin-bottom: 35px
+    &Price
+      font-weight: bold
+    &Button
+      display: block
+      margin: 0 auto
+      font-family: "Montserrat", sans-serif
+      font-size: 20px
+      padding: 10px 18px
+      border-radius: 8px
+      border: none
+      background-color: #363c40
+      color: #fff
+      cursor: pointer
+
+.order
+  position: fixed
+  top: 0
+  width: 100vw
+  height: 100vh
+  z-index: 100
+  display: flex
+  align-items: center
+  justify-content: center
+  overflow: auto
+  color: #041827
+  background-color: #33333366
+  transition: 0.2s
+  &__close
+    position: absolute
+    top: 20px
+    right: 20px
+    width: 20px
+    height: 20px
+    cursor: pointer
+  &__wrapper
+    position: relative
+    background-color: #fff
+    padding: 20px
+  &__title
+    margin-top: 0
+    margin-bottom: 20px
+    text-align: center
+  &__info
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+  &__label
+    flex-basis: 48%
+    margin-top: 0
+    margin-bottom: 20px
+    font-size: 19px
+    font-weight: bold
+    text-align: center
+  &__item
+    flex-basis: 48%
+    max-height: 80vh
+    overflow: auto
+    &Wrapper
+      display: flex
+      margin-bottom: 10px
+      padding: 5px 5px 5px 0
+      border-bottom: 1px solid #000
+      border-top: 1px solid #000
+    &Image
+      height: 100px
+      margin-right: 10px
+    &Text
+      display: flex
+      flex-direction: column
+      justify-content: center
+    &Name
+      max-width: 300px
+      font-size: 18px
+      margin-top: 0
+      margin-bottom: 10px
+    &Price
+      font-size: 17px
+    &Total
+      margin-top: 20px
+      margin-bottom: 0
+      font-size: 20px
+  &__form
+    flex-basis: 48%
+    display: flex
+    flex-direction: column
+    &Label
+      margin-top: 0
+      margin-bottom: 5px
+      font-size: 19px
+    &Input
+      min-height: 40px
+      padding: 6px
+      border: 1px solid
+      border-radius: 4px
+      margin-bottom: 15px
+      font-size: 18px
+      font-family: 'Montserrat', "sans-serif"
+      outline: none
+    &Select
+      min-height: 40px
+      border: 1px solid
+      border-radius: 4px
+      margin-bottom: 15px
+      font-size: 18px
+      font-family: 'Montserrat', "sans-serif"
+      outline: none
+    &Option
+      border-radius: 4px
+      font-size: 18px
+      font-family: 'Montserrat', "sans-serif"
+    &Textarea
+      height: 150px
+      padding: 10px
+      border: 1px solid
+      border-radius: 4px
+      margin-bottom: 15px
+      resize: none
+      font-size: 18px
+      font-family: 'Montserrat', "sans-serif"
+      outline: none
+    &Button
+      width: 70%
+      padding: 10px 7px
+      margin: 0 auto
+      font-family: "Montserrat", sans-serif
+      font-weight: bold
+      font-size: 17px
+      background-color: #041828
+      color: #fff
+      border: none
+      border-radius: 4px
+      cursor: pointer
+.productWindow
+  position: fixed
+  z-index: 50
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+  overflow: auto
+  background-color: #ecf0f1
+  color: #041827
+  &__close
+    position: absolute
+    top: 20px
+    right: 20px
+    width: 20px
+    height: 20px
+    cursor: pointer
+    transition: 0.2s
+    &--hidden
+      display: none
+  &__wrapper
+    display: flex
+  &__productPics
+    flex-basis: 55%
+    &_major
+      width: 100%
+      margin-bottom: 2vh
+      &Img
+        width: 100%
+    &_minor
+      width: 100%
+      &Img
+        height: 10vh
+        margin-right: 10px
+        cursor: pointer
+        transition: 0.2s
+        &--selected
+          box-shadow: 0 0 4px 0
+  &__productInfo
+    flex-basis: 42%
+    flex-shrink: 0
+  &__title
+    font-size: 36px
+    margin-top: 0
+    margin-bottom: 20px
+    font-family: 'Kanit', sans-serif
+  &__price
+    position: relative
+    font-size: 28px
+    margin-top: 0
+    margin-bottom: 50px
+    font-weight: 600
+  &__warningLabel
+    position: absolute
+    top: 100%
+    left: 0
+    font-size: 11px
+    color: #d72424
+  &__showSizesTable
+    margin-top: 0
+    margin-bottom: 30px
+    flex-basis: 100%
+    font-size: 22px
+    text-decoration: underline
+    cursor: pointer
+  &__sizes
+    display: flex
+    flex-wrap: wrap
+    margin-bottom: 60px
+    &Select
+      display: flex
+      flex-direction: column
+      align-items: center
+      min-width: 20px
+      margin-right: 10px
+      margin-bottom: 15px
+      padding: 10px
+      border-radius: 8px
+      border: 2px solid #c3baba
+      font-family: 'Montserrat', sans-serif
+      font-size: 20px
+      background-color: transparent
+      cursor: pointer
+      &--selected
+        border: 2px solid #4d565c
+    &Label
+      font-weight: bold
+    &Price--missing
+      opacity: 0.7
+  &__addButton
+    font-family: "Montserrat", sans-serif
+    font-size: 26px
+    padding: 18px
+    border-radius: 8px
+    border: 1px solid #898989
+    background-color: #363c40
+    color: #fff
+    cursor: pointer
+.addedProductWindow
+  position: fixed
+  top: 0
+  width: 100vw
+  height: 100vh
+  z-index: 100
+  display: flex
+  align-items: center
+  justify-content: center
+  color: #041827
+  background-color: #33333366
+  transition: 0.2s
+  &__wrapper
+    position: relative
+    padding: 45px 40px
+    text-align: center
+    background-color: #f6f6f6
+  &__close
+    position: absolute
+    top: 20px
+    right: 20px
+    height: 20px
+    width: 20px
+    cursor: pointer
+  &__title
+    margin-top: 0
+    margin-bottom: 30px
+    font-size: 24px
+    text-align: center
+  &__info
+    display: flex
+    margin-bottom: 30px
+  &__image
+    height: 200px
+    margin-right: 30px
+  &__name
+    margin-top: 0
+    margin-bottom: 5px
+    font-family: "Kanit", sans-serif
+    font-weight: lighter
+    letter-spacing: 0.2px
+    font-size: 20px
+  &__price
+    display: block
+    margin-bottom: 30px
+    font-size: 17px
+    text-align: left
+  &__cartButton
+    display: block
+    width: 100%
+    margin-bottom: 10px
+    padding: 10px 7px
+    font-family: "Montserrat", sans-serif
+    font-weight: bold
+    font-size: 17px
+    background-color: #d0d9df //#647078
+    color: #041828
+    border: none
+    border-radius: 4px
+    cursor: pointer
+  &__orderButton
+    display: block
+    width: 100%
+    padding: 10px 7px
+    font-family: "Montserrat", sans-serif
+    font-weight: bold
+    background-color: #19234c
+    font-size: 17px
+    color: #fff
+    border: none
+    border-radius: 4px
+    cursor: pointer
+  &__continue
+    border-bottom: 1px dotted #000
+    font-size: 17px
+    cursor: pointer
+.sizeChart
+  position: fixed
+  top: 0
+  width: 100vw
+  height: 100vh
+  z-index: 100
+  display: flex
+  align-items: center
+  justify-content: center
+  color: #041827
+  background-color: #33333366
+  transition: 0.2s
+  &--hidden
+    visibility: hidden
+    opacity: 0
+    z-index: -100
+  &__close
+    position: absolute
+    top: 20px
+    right: 20px
+    width: 20px
+    height: 20px
+    cursor: pointer
+  &__wrapper
+    position: relative
+    padding: 10px 60px
+    text-align: center
+    background-color: #fff
+  &__table
+    min-width: 500px
+    height: 80vh
+    text-align: center
+    border-spacing: 0px
+    &Head
+      height: 35px
+    &Row:nth-child(odd)
+      background-color: #65707850
+
+@import "media"

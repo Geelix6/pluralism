@@ -1,0 +1,238 @@
+@media ( max-width: 1200px)
+  .wrap
+    padding: 0
+    max-width: 950px
+    &--footer
+      padding: 20px 0
+    &--productWindow
+      padding-top: 40px
+    &--cart
+      padding-top: 40px
+  .promo
+    height: 600px
+    &__subtitle
+      max-width: 500px
+  .cart__itemName
+    max-width: 230px
+  .productWindow
+    &__productPics
+      flex-basis: 50%
+    &__title
+      font-size: 30px
+    &__price
+      margin-bottom: 30px
+      font-size: 24px
+    &__sizes
+      margin-bottom: 20px
+    &__showSizesTable
+      font-size: 20px
+    &__addButton
+      padding: 15px
+      font-size: 20px
+  .order__wrapper
+    max-width: 950px
+@media ( max-width: 992px)
+  .wrap
+    max-width: 750px
+    &--footer
+      flex-wrap: wrap
+  .promo
+    height: 500px
+    &__subtitle
+      max-width: 400px
+  .products__wrapper
+    grid-template-columns: repeat(2, 1fr)
+  .footer
+    &__subtitle
+      margin-bottom: 10px
+    &__aboutUs
+      flex-basis: 100%
+      margin-bottom: 40px
+  .cart
+    &__item
+      &Wrapper
+        flex-basis: 65%
+      &Image
+        height: 100px
+    &__order
+      height: 130px
+      flex-basis: 30%
+      &Details
+        margin-bottom: 20px
+      &Button
+        padding: 7px 12px
+  .order
+    &__label
+      flex-basis: 55%
+      &:nth-child(even)
+        flex-basis: 40%
+    &__item
+      flex-basis: 55%
+    &__wrapper
+      min-width: 100vw
+      height: 100%
+    &__form
+      flex-basis: 40%
+      &Label
+        font-size: 17px
+      &Textarea
+        height: 100px
+@media ( max-width: 768px)
+  .wrap
+    max-width: 560px
+    &--productWindow
+      flex-direction: column
+  .promo
+    height: 400px
+    &__title
+      font-size: 26px
+    &__subtitle
+      max-width: 300px
+      font-size: 19px
+    &__orderButton
+      width: 200px
+      font-size: 19px
+  .productWindow
+    &__close
+      // right: 0
+    &__productPics
+      display: flex
+      justify-content: space-between
+      &_major
+        flex-basis: auto
+        margin-right: 50px
+        &Img
+          height: 300px
+          width: auto
+      &_minor
+        flex-basis: auto
+        display: flex
+        flex-direction: column
+        &Img
+          height: 90px
+          width: 90px
+          margin-right: 0
+          margin-bottom: 10px
+    &__title
+      font-size: 24px
+      margin-bottom: 10px
+    &__price
+      font-size: 20px
+      margin-bottom: 20px
+    &__sizes
+      margin-bottom: 10px
+    &__showSizesTable
+      font-size: 18px
+      margin-bottom: 10px
+  .sizeChart
+    &__wrapper
+      padding: 5px 20px
+    &__Info
+      margin-bottom: 0
+  .addedProductWindow__name
+    text-align: left
+  .cart
+    &__wrapper
+      flex-direction: column-reverse
+    &__order
+      margin-bottom: 10px
+  .order
+    top: 0
+    bottom: 0
+    width: unset
+    height: unset
+    overflow: overlay
+    background-color: #fff
+    &__info
+      flex-direction: column
+    &__label:nth-child(even)
+      order: 1
+    &__form
+      order: 2
+      &Button
+        margin-bottom: 10px
+    &__itemTotal
+      margin-bottom: 20px
+@media ( max-width: 576px)
+  .wrap
+    padding: 0 10px
+    &--header
+      justify-content: space-between
+    &--footer
+      padding: 10px
+      flex-direction: column
+    &--productWindow
+      padding-top: 45px
+    &--cart
+      padding-top: 20px
+  .header
+    height: 60px
+    &__logoImage
+      position: unset
+      transform: unset
+    &__cart
+      right: 5px
+  .promo
+    padding-top: 20px
+    margin-top: 60px
+    height: 300px
+    &__title
+      font-size: 22px
+    &__subtitle
+      max-width: 260px
+      font-size: 17px
+      line-height: 22px
+  .item
+    &__title
+      font-size: 19px
+      text-align: center
+    &__price
+      margin-bottom: 0
+      font-size: 16px
+  .footer
+    &__aboutUs
+      flex-basis: unset
+      margin-bottom: 25px
+    &__social
+      flex-basis: unset
+      margin-bottom: 25px
+    &__help
+      flex-basis: unset
+      order: 1
+  .productWindow
+    &__productPics
+      flex-direction: column
+      &_major
+        &Img
+          height: auto
+          width: 100%
+      &_minor
+        flex-direction: row
+        &Img
+          height: 80px
+          width: 80px
+          margin-bottom: 0
+          margin-right: 10px
+  .sizeChart
+    &__table
+      min-width: 80vw
+  .addedProductWindow
+    &__wrapper
+      padding: 45px 15px
+    &__info
+      flex-direction: column
+    &__title
+      font-size: 21px
+    &__image
+      width: 100px
+      height: 100px
+  .cart
+    &__item
+      &Image
+        height: 70px
+      &Name
+        max-width: 150px
+        font-size: 15px
+  .order
+    &__wrapper
+      padding-top: 45px
