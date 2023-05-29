@@ -92,6 +92,13 @@
     &__orderButton
       width: 200px
       font-size: 19px
+  .item:hover
+    box-shadow: unset
+    background-color: unset
+    &:hover .item__image
+      opacity: 1
+    &:hover .item__image--second
+      opacity: 0
   .productWindow
     &__close
       // right: 0
@@ -113,6 +120,8 @@
           width: 90px
           margin-right: 0
           margin-bottom: 10px
+    &__productInfo
+      text-align: center
     &__title
       font-size: 24px
       margin-bottom: 10px
@@ -120,7 +129,11 @@
       font-size: 20px
       margin-bottom: 20px
     &__sizes
+      justify-content: center
       margin-bottom: 10px
+      &Select
+        padding: 5px
+        font-size: 16px
     &__showSizesTable
       font-size: 18px
       margin-bottom: 10px
@@ -179,7 +192,7 @@
     &__title
       font-size: 22px
     &__subtitle
-      max-width: 260px
+      max-width: 265px
       font-size: 17px
       line-height: 22px
   .item
