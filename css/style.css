@@ -6,7 +6,6 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Montserrat", sans-serif;
-  background-color: #f6f6f6;
   color: #041827;
 }
 
@@ -43,7 +42,7 @@ body {
   height: 80px;
   width: 100%;
   box-shadow: 0 0 3px 0;
-  background-color: #fff;
+  background-color: #f6f6f6;
 }
 .header__logoImage {
   position: absolute;
@@ -244,7 +243,7 @@ body {
   bottom: 0;
   left: 0;
   overflow: auto;
-  background-color: #ecf0f1;
+  background-color: #fff;
   color: #041827;
 }
 .cart--hidden {
@@ -477,7 +476,7 @@ body {
   bottom: 0;
   left: 0;
   overflow: auto;
-  background-color: #ecf0f1;
+  background-color: #fff;
   color: #041827;
 }
 .productWindow__close {
@@ -607,7 +606,7 @@ body {
   position: relative;
   padding: 45px 40px;
   text-align: center;
-  background-color: #f6f6f6;
+  background-color: #fff;
 }
 .addedProductWindow__close {
   position: absolute;
@@ -960,7 +959,7 @@ body {
     flex-direction: column;
   }
   .wrap--productWindow {
-    padding-top: 45px;
+    padding-top: 15px;
   }
   .wrap--cart {
     padding-top: 20px;

@@ -11,25 +11,25 @@ $(".item")[1].productName = "New Balance 530";
 $(".item")[1].productSizesAndPrices = {
   "9.5 US": { price: "12 000р", availability: true },
 };
-$(".item")[1].productImageMajor = "img/nb530_1.jpeg";
-$(".item")[1].productImageMinor1 = "img/nb530_2.jpeg";
-$(".item")[1].productImageMinor2 = "img/nb530_3.jpeg";
+$(".item")[1].productImageMajor = "img/nb530_1.jpg";
+$(".item")[1].productImageMinor1 = "img/nb530_2.jpg";
+$(".item")[1].productImageMinor2 = "img/nb530_3.jpg";
 
 $(".item")[2].productName = "New Balance 9060";
 $(".item")[2].productSizesAndPrices = {
   "9.5 US": { price: "18 000р", availability: true },
 };
-$(".item")[2].productImageMajor = "img/nb9060_1.jpg";
-$(".item")[2].productImageMinor1 = "img/nb9060_2.webp";
-$(".item")[2].productImageMinor2 = "img/nb9060_3.jpg";
+$(".item")[2].productImageMajor = "img/nb9060_1.png";
+$(".item")[2].productImageMinor1 = "img/nb9060_2.png";
+$(".item")[2].productImageMinor2 = "img/nb9060_3.png";
 
 $(".item")[3].productName = "New Balance 5740";
 $(".item")[3].productSizesAndPrices = {
   "6.5 US": { price: "14 500р", availability: true },
 };
-$(".item")[3].productImageMajor = "img/nb5740_1.jpg";
-$(".item")[3].productImageMinor1 = "img/nb5740_2.jpg";
-$(".item")[3].productImageMinor2 = "img/nb5740_3.jpg";
+$(".item")[3].productImageMajor = "img/nb5740_1.png";
+$(".item")[3].productImageMinor1 = "img/nb5740_2.png";
+$(".item")[3].productImageMinor2 = "img/nb5740_3.png";
 
 $(".item")[4].productName = "Nike Air Force 1 ‘07";
 $(".item")[4].productSizesAndPrices = {
@@ -51,26 +51,26 @@ $(".item")[6].productName = "Adidas Adi2000";
 $(".item")[6].productSizesAndPrices = {
   "9.5 US": { price: "10 000р", availability: true },
 };
-$(".item")[6].productImageMajor = "img/adi2000_1.jpg";
-$(".item")[6].productImageMinor1 = "img/adi2000_2.jpg";
-$(".item")[6].productImageMinor2 = "img/adi2000_3.jpg";
+$(".item")[6].productImageMajor = "img/adi2000_1.png";
+$(".item")[6].productImageMinor1 = "img/adi2000_2.png";
+$(".item")[6].productImageMinor2 = "img/adi2000_3.png";
 
 $(".item")[7].productName = "Puma CA Pro Classic";
 $(".item")[7].productSizesAndPrices = {
   "7 US": { price: "10 000р", availability: true },
   "10.5 US": { price: "10 000р", availability: true },
 };
-$(".item")[7].productImageMajor = "img/puma-ca-pro_1.webp";
-$(".item")[7].productImageMinor1 = "img/puma-ca-pro_2.webp";
-$(".item")[7].productImageMinor2 = "img/puma-ca-pro_3.webp";
+$(".item")[7].productImageMajor = "img/puma-ca-pro_1.jpg";
+$(".item")[7].productImageMinor1 = "img/puma-ca-pro_2.jpg";
+$(".item")[7].productImageMinor2 = "img/puma-ca-pro_3.jpg";
 
 $(".item")[8].productName = "Ocai Retro";
 $(".item")[8].productSizesAndPrices = {
   "9.5 US": { price: "12 500р", availability: true },
 };
-$(".item")[8].productImageMajor = "img/ocai-retro_1.webp";
-$(".item")[8].productImageMinor1 = "img/ocai-retro_2.webp";
-$(".item")[8].productImageMinor2 = "img/ocai-retro_3.webp";
+$(".item")[8].productImageMajor = "img/ocai-retro_1.jpg";
+$(".item")[8].productImageMinor1 = "img/ocai-retro_2.jpg";
+$(".item")[8].productImageMinor2 = "img/ocai-retro_3.jpg";
 
 //К каждому товару прикрепить функцию, открывающую модальное окно
 $(".item").click(function () {
