@@ -459,8 +459,8 @@ function createOrder() {
     </div>
   </div>`;
   $(orderWindow).insertAfter(".cart");
-  //Меняем стили, если заказываем не из корзины
 
+  $(".order__formInput").slice(1, 2).mask("+7(000) 000-00-00"); // маска на инпут с номером телефона
   $(".order__formButton").click(function (e) {
     if (!$(".order__formInput")[0].value || !$(".order__formInput")[1].value) {
       alert("Вы заполнили не все поля формы");
@@ -539,7 +539,7 @@ function createRequest() {
     </div>
   </div>`;
   $(orderWindow).insertAfter(".cart");
-
+  $(".order__formInput").slice(1, 2).mask("+7(000) 000-00-00"); // маска на инпут с номером телефона
   $(".order__formButton").click(function (e) {
     if (!$(".order__formInput")[0].value || !$(".order__formInput")[1].value || !$(".order__formTextarea")[0].value) {
       alert("Вы заполнили не все поля формы");

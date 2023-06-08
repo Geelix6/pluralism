@@ -1,9 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:title" content="Pluralism Originality - только оригинальные кроссовки" />
+    <meta property="og:description" content="У нас Вы можете оставить заявку на заказ ЛЮБОЙ пары лично под Вас" />
+    <meta property="og:image" content="https://pluralism.pro/img/og-image.png" />
+    <meta property="og:url" content="https://pluralism.pro" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -50,7 +54,9 @@
   <body>
     <header class="header">
       <div class="wrap wrap--header">
-        <img class="header__logoImage" src="img/logo.svg" alt="Логотип Pluralism Originality" />
+        <a href="https://pluralism.pro"
+          ><img class="header__logoImage" src="img/logo.svg" alt="Логотип Pluralism Originality"
+        /></a>
         <div class="header__cart">
           <svg class="header__cartIcon" viewBox="0 0 19 23">
             <path
@@ -155,10 +161,14 @@
         <div class="footer__help">
           <h4 class="footer__subtitle">Помощь</h4>
           <ul class="footer__help_list">
-            <li class="footer__help_listItem">Доставка и оплата</li>
-            <li class="footer__help_listItem">Пользовательское соглашение</li>
-            <li class="footer__help_listItem">FAQ</li>
-            <li class="footer__help_listItem">Оферта</li>
+            <li class="footer__help_listItem">
+              <a class="footer__help_listItemLink" href="https://pluralism.pro/terms.html">Условия обслуживания</a>
+            </li>
+            <li class="footer__help_listItem">
+              <a class="footer__help_listItemLink" href="https://pluralism.pro/privacy_policy.html">
+                Политика кондефициальности
+              </a>
+            </li>
           </ul>
         </div>
         <div class="footer__social">
@@ -202,6 +212,7 @@
     </div>
 
     <script src="js/jquery-3.6.4.min.js"></script>
+    <script src="js/jquery.mask.min.js"></script>
     <script src="js/product.js"></script>
     <script src="js/main.js"></script>
   </body>

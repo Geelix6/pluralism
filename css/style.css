@@ -34,6 +34,12 @@ body {
   justify-content: space-between;
   padding-top: 40px;
 }
+.wrap--terms {
+  padding-top: 85px;
+}
+.wrap--privacyPolicy {
+  padding-top: 85px;
+}
 
 .header {
   position: fixed;
@@ -211,6 +217,10 @@ body {
 }
 .footer__help_listItem:last-child {
   margin-bottom: 0;
+}
+.footer__help_listItemLink {
+  text-decoration: none;
+  color: inherit;
 }
 .footer__social {
   flex-basis: 25%;
@@ -736,6 +746,12 @@ body {
   .wrap--cart {
     padding-top: 40px;
   }
+  .wrap--terms {
+    padding-top: 85px;
+  }
+  .wrap--privacyPolicy {
+    padding-top: 85px;
+  }
   .promo {
     height: 600px;
   }
@@ -963,6 +979,12 @@ body {
   }
   .wrap--cart {
     padding-top: 20px;
+  }
+  .wrap--terms {
+    padding-top: 65px;
+  }
+  .wrap--privacyPolicy {
+    padding-top: 65px;
   }
   .header {
     height: 60px;
