@@ -50,10 +50,14 @@ body {
   box-shadow: 0 0 3px 0;
   background-color: #f6f6f6;
 }
-.header__logoImage {
+.header__logoWrapper {
+  display: block;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
+  height: 100%;
+}
+.header__logoImage {
   height: 100%;
 }
 .header__cart {
@@ -989,7 +993,7 @@ body {
   .header {
     height: 60px;
   }
-  .header__logoImage {
+  .header__logoWrapper {
     position: unset;
     transform: unset;
   }
