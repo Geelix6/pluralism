@@ -25,7 +25,7 @@ $(".item")[2].productImageMinor2 = "img/nb9060_3.png";
 
 $(".item")[3].productName = "New Balance 5740";
 $(".item")[3].productSizesAndPrices = {
-  "6.5 US": { price: "14 500р", availability: true },
+  "6.5 US": { price: "14 500р", availability: false },
 };
 $(".item")[3].productImageMajor = "img/nb5740_1.png";
 $(".item")[3].productImageMinor1 = "img/nb5740_2.png";

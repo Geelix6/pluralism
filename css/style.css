@@ -420,7 +420,7 @@ body {
 }
 .order__itemTotal {
   margin-top: 20px;
-  margin-bottom: 0;
+  margin-bottom: 10px;
   font-size: 20px;
 }
 .order__form {
@@ -548,9 +548,7 @@ body {
   font-weight: 600;
 }
 .productWindow__warningLabel {
-  position: absolute;
-  top: 100%;
-  left: 0;
+  margin-bottom: -1em;
   font-size: 11px;
   color: #d72424;
 }
@@ -964,6 +962,9 @@ body {
     margin-bottom: 10px;
   }
   .order__itemTotal {
+    margin-bottom: 10px;
+  }
+  .order__itemSale {
     margin-bottom: 20px;
   }
 }

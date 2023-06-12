@@ -245,15 +245,24 @@ function createProductWindow(
     $(".productWindow__close").toggleClass("productWindow__close--hidden");
   });
 
+  //проверка для первой кнопки, есть ли ее размер в наличии
+  if ($(".productWindow__sizesSelect")[0].children[1].className == "productWindow__sizesPrice--missing") {
+    $(".productWindow__sizesSelect").first().css("border", "2px solid #4d565c73");
+    $(".productWindow__sizesSelect")[0].children[0].style.opacity = "0.7";
+    $(".productWindow__price").append(`<div class="productWindow__warningLabel">
+              К сожалению, данного товара в данный момент нет в наличии на складе, доставка составит до 28 дней, но вы можете оставить заказ на этот товар
+        </div>`);
+  }
+
   //выбрать другой размер, поменять цену и оповестить, если отсутствует
   $(".productWindow__sizesSelect").click(function () {
     $(".productWindow__sizesSelect").removeClass("productWindow__sizesSelect--selected");
     $(this).addClass("productWindow__sizesSelect--selected");
     $(".productWindow__price")[0].innerText = this.children[1].innerText;
     if ($(this.children[1]).hasClass("productWindow__sizesPrice--missing")) {
-      $(".productWindow__price").append(`<span class="productWindow__warningLabel">
-              К сожалению, данного товара в данный момент нет в наличии на ближайшем складе, доставка составит до 30 дней, но вы можете оставить заказ на этот товар
-        </span>`);
+      $(".productWindow__price").append(`<div class="productWindow__warningLabel">
+              К сожалению, данного товара в данный момент нет в наличии на складе, доставка составит до 28 дней, но вы можете оставить заказ на этот товар
+        </div>`);
     } else {
       $(".productWindow__warningLabel").remove();
     }
@@ -439,6 +448,7 @@ function createOrder() {
         <div class="order__item">
           ${items.toString().replaceAll(",", "")}
           <h4 class="order__itemTotal">Итого: ${$(".cart__orderPrice").text()}</h4>
+          <div class="order__itemSale">Скидка 500р на Ваш первый заказ!</div>
         </div>
         <form class="order__form" action="send.php" method="POST">
           <p class="order__formLabel">Имя</p>
